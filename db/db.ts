@@ -13,4 +13,5 @@ export const pool = new Pool({
   host: dev_mode ? "localhost" : "ec2-54-159-22-90.compute-1.amazonaws.com",
   port: 5432,
   database: dev_mode ? "jira" : "d3vdp5e6gpeeuv",
+  ssl: { rejectUnauthorized: false },
 });
