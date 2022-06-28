@@ -6,6 +6,8 @@ import { taskRouter } from "./routes/task.router";
 
 const PORT = process.env.PORT || 8080;
 
+console.log(process.env.NODE_ENV);
+
 const app = express();
 
 app.use(express.json());
