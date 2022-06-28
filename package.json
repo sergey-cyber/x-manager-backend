@@ -1,12 +1,15 @@
 {
-  "name": "jira_backend",
+  "name": "x-manager-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend for x-manager app",
+  "main": "build/index.js",
   "scripts": {
+    "deploy": "git push heroku main",
     "build": "tsc",
-    "start": "npm run build && node ./build/index.js",
-    "dev": "nodemon index.ts"
+    "heroku-postbuild": "npm run build",
+    "start": "node ./build/index.js",
+    "dev": "nodemon index.ts",
+    "init": "tsc --init"
   },
   "author": "",
   "license": "ISC",
